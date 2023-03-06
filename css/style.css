@@ -60,7 +60,7 @@ main > section {
 }
 
 /* 12. Select the strong tag inside the p tag directly after the h2 in the section directly inside the main */
-section > h2 ~ p strong {
+section > h2 + p strong {
     color: purple;
 }
 
