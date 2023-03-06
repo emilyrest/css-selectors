@@ -1,8 +1,75 @@
-body {
-    background-color: #ccc; 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* 1. Select body */
+html {
+    background-color: #f2f2f2;
+    padding: 0 2em;
 }
 
-h1 {
-    color: #fff
+/* 2. Select h1,h2,h3 */
+h1,h2,h3 {
+    font-family:sans-serif;
+    margin-bottom: 0;
+}
+
+/* 3. Select all p tags */
+p {
+    margin: .5em 0;
+}
+
+/* 4. Use an adjacent selector to get the p tags immediately beside the h1 and h3 tags */
+h1 + p, h3 + p {
+    color: purple;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* 5. Use descendant selector to select the div inside header */
+div > header {
+    margin: 1em 0;
+}
+
+/* 6. Select all h2 tags */
+h2 {
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+}
+
+/* 7. Use the child selector to target the p tag immediately inside the header */
+div > h2 {
+    font-size: 1.25rem;
+}
+
+/* 8. Select the class profile-pic */
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* 9. Select the link with rel="external" attribute */
+a[rel="external"] {
+    color: purple;
+}
+
+/* 10. Select the first section (using first of type) within the section using */
+#experience section:first-of-type {
+    border-bottom: 2px dashed #ccc;
+}
+
+/* 11. Use the child selector to target the section tag immediately inside the main */
+main > section {
+    margin-bottom: 3rem;
+}
+
+/* 12. Select the strong tag inside the p tag directly after the h2 in the section directly inside the main */
+section > h2 ~ p strong {
+    color: purple;
+}
+
+/* 13. Select every even li */
+li:nth-child(2) {
+    color: purple;
+}
+
+/* 14. Select Select the last div inside the dl */
+dl div:last-child {
+    background-color: #ccc;
 }
